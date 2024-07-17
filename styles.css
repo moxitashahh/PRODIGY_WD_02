@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff0099, #493240, #1e3c72, #2a5298, #00c9ff, #92fe9d, #1c92d2, #f2fcfe, #fc5c7d, #6a82fb, #fc466b, #3f5efb, #4776e6, #ee9ca7, #ef629f);
+    background-size: 1800% 1800%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* .circle {
+    border-radius: 50%;
+    padding: 30px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+h1 {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.5em;
+}
+
+#stopwatch {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopwatch span {
+    display: inline-block;
+    min-width: 30px;
+    text-align: center;
+}
+
+.buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button#startStopBtn {
+    background: #28a745;
+    color: white;
+}
+
+button#resetBtn {
+    background: #dc3545;
+    color: white;
+}
+
+button#lapBtn {
+    background: #007bff;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.laps {
+    position: absolute;
+    top: calc(100% + 20px); /* Adjust as needed */
+    width: 100%;
+    text-align: center;
+}
+
+.laps h2 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.2em;
+}
+
+#lapsList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-height: 150px; /* Adjust as needed */
+    overflow-y: auto;
+    text-align: left;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#lapsList li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
